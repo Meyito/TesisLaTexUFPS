@@ -1,0 +1,34 @@
+\select@language {english}
+\contentsline {chapter}{Resumen}{ii}{section*.3}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\MakeUppercase {Abstract}}{iv}{section*.5}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\MakeUppercase {Dedicatoria}}{v}{section*.7}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\MakeUppercase {Reconocimientos}}{vi}{section*.9}
+\setcounter {tocdepth}{2}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\MakeUppercase {Lista de Tablas} }{viii}{section*.13}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\MakeUppercase {Lista de Figuras} }{ix}{section*.15}
+\setcounter {tocdepth}{2}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {I}\MakeUppercase {INTRODUCCI\'ON}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Planteamiento del Problema}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos y Contribuciones}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Estructura del Documento}{3}{section.1.3}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {II}\MakeUppercase {CONTEXTO}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Alineaci\'on de Negocio-IT}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Arquitectura Empresarial}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Arquitectura Dirigida por Modelos}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Tartarus}{6}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Arquitectura de Negocio (BA)}{9}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Arquitectura de Informaci\'on (IA)}{9}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Ontolog\'ias}{10}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Matching de Ontolog\'ias}{10}{subsection.2.5.1}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {III}\MakeUppercase {SINZA}}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Trabajo Futuro}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Publicaciones}{13}{section.3.2}
+\setcounter {tocdepth}{3}

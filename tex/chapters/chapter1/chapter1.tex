@@ -1,0 +1,42 @@
+%=================================================================
+\chapter{INTRODUCCI\'ON} \label{cha:intro}
+%=================================================================
+
+La alineaci\'on entre negocio y tecnolog\'ia puede ser definida como la forma de cuantificar el nivel de coherencia entre las necesidades del negocio y la respuesta ofrecida por las Tecnolog\'ias de Informaci\'on (IT) \cite{Pereira:2003}. Esta alineaci\'on es un tema clave en todas las organizaciones. Cada a\~no, cuando los directores de tecnolog\'ia son encuestados para identificar sus principales prioridades, la necesidad de alinear negocio y IT aparece en los primeros lugares \cite{Wang:20082}. Gestionar y evaluar la alineaci\'on negocio-IT no es f\'acil, ni en su conceptualizaci\'on ni en su realizaci\'on \cite{Scott:2005}. La falta de alineaci\'on es una de las razones fundamentales por la cual las empresas no pueden alcanzar todo el potencial de sus inversiones en IT \cite{Cuenca:2010}. Informaci\'on desactualizada, procesos repetitivos no automatizados, silos de informaci\'on, procesos y entidades redundantes son ejemplos comunes de dicha desalineaci\'on. 
+
+Estudios anteriores \cite{henderson:1990, Bergeron:2004, Elhari:2011, Plazaola:2008, Wang:2008} han propuesto marcos te\'oricos y metodolog\'ias de alineaci\'on centrados en la aplicaci\'on de encuestas sobre la percepci\'on y tabulaci\'on de resultados; pero en general no abordan un an\'alisis apoyado en herramientas automatizadas. 
+
+La Arquitectura Empresarial (EA) se presenta como un elemento importante para alcanzar la alineaci\'on negocio-IT \cite{Lankhorst:2004}. Una EA describe la organizaci\'on en dimensiones o arquitecturas como Negocio (BA), Informaci\'on (IA), Aplicaciones (AA) y Tecnolog\'ia (TA) y se han propuesto frameworks para evaluaci\'on del alineamiento a trav\'es de los elementos contenidos en estos dominios.
+
+Varias propuestas \cite{Pereira:2003, Pereira:2005, Sousa:2005, Wegmann:2005, Cuenca:2010} abordan el alineamiento desde la perspectiva de la correspondencia entre los elementos o componentes de los dominios de EA ( i.e. BA, IA, AA y TA). Para determinar esta correspondencia se requiere identificar los diferentes elementos de la EA, compararlos, establecer las relaciones o trazas entre las diferentes dimensiones y evaluarlos aplicando reglas heur\'isticas \cite{Pereira:2003, Pereira:2005, Sousa:2005} que detectan s\'intomas de potenciales desalineaciones. Algunas de las heur\'isticas de alineaci\'on BA-IA propuestas son: i) Redundancia de procesos de negocio y activos de informaci\'on, ii) procesos que no acceden a ninguna entidad y iii) entidades que no son accedidas por ning\'un proceso.
+
+Seg\'un \cite{wegmann:2003, Wegmann:2005, Anaya:2005}, dado que uno de los prop\'ositos de la EA es alinear negocio e IT, el concepto de \textit{trazabilidad} es esencial para hacer expl\'icita la manera como esta integraci\'on es alcanzada en todos los niveles organizacionales. Por tanto \cite{wegmann:2003} define la trazabilidad como la capacidad para hacer expl\'icitas las relaciones entre elementos que se encuentran en diferentes niveles de la EA y que refleja un nivel de alineaci\'on e integraci\'on entre ellos.
+
+Nuestra aproximaci\'on est\'a en l\'inea con los trabajos previos y entiende la trazabilidad como un s\'intoma o indicador de alineaci\'on de Negocio-IT que puede ser inferido partir de los elementos contenidos en una EA. Estudios anteriores sobre evaluaci\'on de alineaci\'on Negocio-IT a trav\'es de los artefactos de EA coinciden en un conjunto de tareas necesarias para implementar tal evaluaci\'on: i) Identificar los elementos de cada dimensi\'on de la EA, ii) comparar los elementos de cada dimensi\'on de la EA, iii) definir relaciones entre estos elementos (trazabilidad), iv) identificar alineaciones y desalineaciones y v) asignar un nivel de alineaci\'on.
+
+%=================================================================
+\section{Planteamiento del Problema} \label{sec:problem}
+%=================================================================
+
+A pesar que uno de los principales objetivos de los marcos de EA es proveer representaciones integradas entre los diferentes niveles organizacionales, es dif\'icil establecer claramente la trazabilidad entre ellos \cite{wegmann:2003}. La verificaci\'on de la alineaci\'on y la trazabilidad con el paradigma de modelado por dimensiones se ha convertido en un problema importante \cite{Wegmann:2005}. 
+
+Hasta donde conocemos, algunas tareas involucradas en la evaluaci\'on de alineamiento como: Comparar los elementos de EA e identificar trazabilidad entre elementos de diferentes niveles se realizan tradicionalmente de forma manual. Esto implica revisar y comparar manualmente un conjunto de artefactos heterog\'eneos (diagramas, documentos de texto, hojas de c\'alculo, im\'agenes) que describen una EA. Entre m\'as elementos tiene cada dominio de EA, m\'as complejo es el concepto y la evaluaci\'on del alineamiento, porque m\'as reglas y heur\'isticas necesitan ser definidas y aplicadas para gobernar las relaciones entre dichos elementos \cite{Sousa:2005}. Un procedimiento manual de revisi\'on, comparaci\'on y asociaci\'on implica una alta probabilidad de error, gran inversi\'on de tiempo y recursos \cite{Rahm:2001}. El problema se profundiza en grandes organizaciones con complejas y extensas EA que contienen cientos de artefactos, por lo que esta tarea no solo es compleja, sino a veces inviable en la pr\'actica. 
+
+La preguntas de investigaci\'on que abordamos en este trabajo son: 
+\begin{itemize}
+\item \textbf{RQ1:} ?`Es posible automatizar tareas de evaluaci\'on de alineaci\'on entre BA-IA y de que manera?
+\item \textbf{RQ2:} ?`Existe un beneficio en t\'erminos de precisi\'on y agilidad al apoyar las tareas de evaluaci\'on de alineaci\'on entre BA-IA con una aproximaci\'on automatizada orientada por modelos y matching de ontolog\'ias?
+\end{itemize}
+
+%===============================================================
+\section{Objetivos y Contribuciones} \label{subsec:objective}
+%===============================================================
+
+Los principales objetivos de nuestra propuesta son: i) Apoyar el proceso de evaluaci\'on de alineaci\'on entre BA-IA. ii) Descubrir autom\'aticamente trazabilidad entre elementos de los dominios de BA e IA. iii) Detectar alineaciones y desalineaciones potenciales entre BA-IA en el marco de una EA.
+
+Las contribuciones centrales de este trabajo se resumen as\'i: Extendemos un metamodelo de EA para formalizar las asociaciones BA-IA. Definimos un procedimiento para inferir trazabilidad entre elementos de BA e IA, apoyado en matching de Ontolog\'ias. Construimos Kalcas Query Language (KQL), un Domain Specific Language (DSL) gr\'afico que permite realizar consultas de alineaciones y desalineaciones entre BA-IA consignadas en el modelo de EA.
+
+%===============================================================
+\section{Estructura del Documento} \label{subsec:structure}
+%===============================================================
+El resto de este documento esta organizado de la siguiente manera: El Cap\'itulo \ref{cha:background} describe el contexto asociado a la problem\'atica y en el cual podemos basar nuestra estrategia. El Cap\'itulo \ref{cha:studycase} ofrece un caso de estudio para motivar nuestra aproximaci\'on. En el Cap\'itulo \ref{cha:solution} presentamos nuestra propuesta de soluci\'on. El lenguaje de consulta KQL es detallado en el Cap\'itulo \ref{cha:KQL}. El Cap\'itulo \ref{cha:implementacion} ofrece en detalle la implementaci\'on de esta propuesta. La experimentaci\'on y evaluaci\'on realizada se expone en el Cap\'itulo \ref{cha:evaluation}. El  Cap\'itulo \ref{cha:relatedwork} describe el trabajo relacionado. Y finalmente el Cap\'itulo \ref{cha:conclusions} reporta las conclusiones y el trabajo futuro.

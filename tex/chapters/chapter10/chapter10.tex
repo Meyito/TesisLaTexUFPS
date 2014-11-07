@@ -1,0 +1,56 @@
+%=================================================================
+\chapter{DISCUSI\'ON} \label{cha:conclusions}
+%=================================================================
+
+En este cap\'itulo discutimos los resultados, las conclusiones y limitaciones de este trabajo. Igualmente resumimos como esta propuesta aborda la problem\'atica presentada inicialmente y enumeramos las publicaciones realizadas en el desarrollo de este trabajo.
+
+Inicialmente describimos el contexto de alineaci\'on entre Negocio y TI, algunas de las aproximaciones existentes y sus correspondientes problem\'aticas. Luego, presentamos una propuesta para apoyar la evaluaci\'on de alineaci\'on entre BA e IA utilizando MDA y matching de ontolog\'ias. Implementamos un conjunto de herramientas que ofrecen ingenier\'ia inversa de BA e IA, inferencia de trazabilidad y dise\~no de consultas. La tarea de matching autom\'atico de ontolog\'ias ofreci\'o un 55\% de exactitud, una invetigaci\'on mas profunda acerca de las t\'ecnicas y algoritmos utilizados puede aportar mayor precisi\'on en esta fase.
+
+Formalizamos la trazabilidad, redundancia y alineamiento con el prop\'osito de dar las bases para construir nuestra propuesta. Logramos definir las tareas comparaci\'on y detecci\'on de trazabilidad en orden de implementar mecanismos de inferencia apoyados en MDA y ontolog\'ias. Implementamos un DSL gr\'afico utilizando GMF que habilita el dise\~no de consultas de alineamiento. Generamos reportes de salida con procesos y entidades visualizados en grafos, que facilitan la identificaci\'on de alineaciones y desalineaciones. El uso de un DSL gr\'afico a partir de nuestra experiencia parece facilitar el dise\~no de consultas, an\'alisis y evaluaci\'on de alineaci\'on de arquitecturas, pero una comparaci\'on con otro mecanismo para construir consultas (i. e. DSL textual) puede ofrecer nuevas conclusiones.
+
+Para validar esta propuesta, tomamos un segmento de la EA del ICFES, definimos unas tareas de ana\'alisis y un grupo de arquitectos nos apoyaron en la experimentaci\'on. Comparamos la exactitud y los tiempos utilizando las herramientas tradicionales contra Kalcas. Logramos expresar heur\'isticas de desalineamiento entre negocio e informaci\'on propuestas en trabajos anteriores utilizando KQL. 
+
+La experimentaci\'on realizada en el ICFES nos permiti\'o afirmar que es posible soportar el an\'alisis de alineaci\'on en tareas como inferir trazabilidad entre componentes, y evaluar heur\'isticas de desalineamiento a trav\'es de consultas expresadas en KQL. Demostramos que la identificaci\'on autom\'atica de desalineaciones entre procesos de negocio reduce el porcentaje de error y el tiempo comparado con tareas manuales. Evidenciamos importantes incrementos en la exactitud de las tareas de an\'alisis y una reducci\'on significativa en los tiempos, sobre todo al analizar procesos complejos.
+
+Aplicamos estas heur\'isticas en un peque\~no segmento de BA e IA en el ICFES y los resultados obtenidos nos permitieron detectar algunas desalineaciones y falencias en las descripciones de los artefactos. Estas desalineaciones fueron analizadas con los arquitectos del ICFES, y encontramos principalmente tres situaciones: i) Actividades manuales que no est\'an automatizadas. ii) Entidades que no se est\'an utilizando actualmente (obsoletas). iii) Entidades que en la realidad son accedidas por el IS, pero no son referenciadas clara y expl\'icitamente en los diagramas BPMN. iv) Entidades cargadas en Tartarus cuyos procesos no fueron tenidos en cuenta en esta experimentaci\'on. En resumen pudimos identificar actividades con posibilidades de automatizaci\'on (aunque no en todos los casos) y entidades en desuso, diagramas BPMN que requieren descripciones mas completas y algunos \textit{falsos positivos} originados principalmente por el dise\~no y alcance de este experimento. Tambi\'en pudimos concluir que dentro de este experimento las actividades o entidades que carec\'ian de trazabilidad en realidad presentaban alg\'un grado de desalineaci\'on. Por tanto evidenciamos en la pr\'actica una relaci\'on directa entre la trazabilidad de los elementos BA-IA y la alineaci\'on de los dominios de procesos y datos. Los resultados de la experimentaci\'on fueron entregados al ICFES con el fin de ofrecer posibilidad de an\'alisis mas profundos y oportunidades de mejora.
+
+No pudimos comparar nuestra propuesta con una propuesta similar, dado que aunque referenciamos otras aproximaciones alrededor de evaluaci\'on de alineamiento, no encontramos herramientas que ofrezcan descubrimiento autom\'atico de trazabilidad. Nuestra propuesta no pretende reemplazar las metodolog\'ias previas apoyadas en entrevistas y encuestas de percepci\'on acerca del alineamiento Negocio-IT, sino complementarlas con una verificaci\'on minuciosa sobre los componentes contenidos en una EA.
+
+%**************************************************************
+\section{Trabajo Futuro} \label{sec:futurework}
+%**************************************************************
+
+Las siguientes son algunas propuestas de trabajo futuro que hemos visualizado como continuaci\'on o extensiones a nuestra propuesta:
+
+\begin{itemize}
+
+\item Futuras investigaciones pueden incorporar la definici\'on de m\'etricas de alineaci\'on que permitan evaluar una EA frente a niveles de madurez presentados en trabajos anteriores como \cite{Elhari:2011}.
+
+\item La inclusi\'on de los dem\'as dominios de la EA como Aplicaciones (AA) y Tecnolog\'ia (TA) mejorar\'ia la completitud de esta propuesta. Inferir trazabilidad con elementos que hacen parte de la estrategia de la organizaci\'on como drivers, principios, objetivos aportar\'ia acercar\'ia mas nuestra propuesta a la alineaci\'on negocio-IT. En este punto hay consideraciones importantes a investigar, como el hecho de alinear elementos a diferente nivel de granularidad, como lo son por ejemplo un driver de negocio y una entidad de informaci\'on.
+
+\item Los mapeos generados con este framework podr\'ian exportarse a lenguajes est\'andar de integraci\'on de EA como ArchiMate \cite{Jonkers:2004}. De tal manera que diferentes herramientas puedan reutilizar las inferencias alcanzadas con Kalcas. Otros tipos de consultas que resuelvan diferentes preguntas sobre el modelo pueden enriquecer el editor KQL, por ejemplo obtener todas las actividades o entidades que no est\'en alineadas.
+
+\item Las tareas de alineamiento en la fase de experimentaci\'on han utilizado algunos algoritmos de Alignment API, extender las pruebas en cuanto a motores y algoritmos para evaluar mas resultados puede mejorar la exactitud promedio de Kalcas. Para el momento de nuestro trabajo no hay disponible un algoritmo ling\"u\'istico aplicable al idioma espa\~nol, por tanto un avance en esa direcci\'on es muy valioso no solo para esta propuesta sino para el campo del matching de ontolog\'ias en general. 
+
+\item En este trabajo se utiliz\'o la trazabilidad inferida para apoyar an\'alisis de alineaci\'on, pero nuevas investigaciones pueden emplear la trazabilidad para soportar el an\'alisis de impacto en una EA. Nuestra propuesta podr\'ia ser extendida o modificada para ser usada con otros metamodelos de EA diferentes a Tartarus.
+
+\end{itemize}
+
+%**************************************************************
+\section{Publicaciones} \label{sec:publish}
+%**************************************************************
+Durante toda la realizaci\'on de este trabajo de tesis, fueron aceptadas publicaciones en modalidad \textit{full research papers} en los siguientes eventos internacionales:
+
+\begin{itemize}
+
+\item 16th East-European Conference on Advances in Databases and Information Systems
+(ADBIS 2012): KALCAS: A frameworK for semi-Automatic aLignment of data and business proCesses ArchitectureS. Poznan, Polonia. Septiembre 2012.
+
+\item XXX International Conference of the Chilean Computer Science Society (SCCC 2011): An Ontology-Matching based Proposal to Detect Potential Redundancies on Enterprise Architectures. Curic\'o, Chile. Noviembre 2011.
+
+\item XXXVII Conferencia Latinoamericana de Inform\'atica (XXXVII CLEI): Detecci\'on de Elementos Redundantes en
+Arquitecturas de Informaci\'on: Un Enfoque Apoyado en Alineaci\'on de Ontolog\'ias. Quito, Ecuador. Octubre 2011.
+
+\end{itemize}
+
+

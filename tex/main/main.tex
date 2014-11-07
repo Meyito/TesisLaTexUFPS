@@ -1,0 +1,121 @@
+%------------------------------------------------------------------
+%  Document Class
+%------------------------------------------------------------------
+\documentclass{../class/gatech-thesis-tphmAddaptation}
+%------------------------------------------------------------------
+%  Graphics and Related Packages
+%------------------------------------------------------------------
+%\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[dvips]{color}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{savesym}
+\savesymbol{pdfbookmark}
+\usepackage{hyperref}
+\restoresymbol{HR}{pdfbookmark}
+%\usepackage[pdftex]{graphicx}
+\graphicspath{{../../images/jpg/}}
+\DeclareGraphicsExtensions{.png,.jpg}
+\usepackage{url}
+\usepackage{listings}
+\renewcommand\figurename{Figura}
+\renewcommand\chaptername{Cap\'itulo}
+\renewcommand\tablename{Tabla}
+\renewcommand\refname{Bibliograf\'ia}
+%\renewcommand\contentsnae{Contenido} Esta generando error
+\newtheorem{theorem}{Definition}[section]
+%\newtheorem{definition}{\definitionname}[section]
+
+%\usepackage{url}
+%\usepackage[pdftex]{graphicx}
+%\graphicspath{{../pdf/}{../../images/jpg/}{../../images/png/}}
+%\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png}
+%\usepackage{listings}
+%\hyphenation{}
+%\usepackage[english]{babel}
+%\parskip 1ex
+
+%------------------------------------------------------------------
+%  Controls the files included for generation
+%------------------------------------------------------------------
+\hyphenation{op-tical net-works semi-conduc-tor cu-rrent he-te-ro-ge-neous un-ders-tood des-cri-bes go-ver-nan-ce asso-cia-ted sca-la-bi-li-ty si-mi-la-ri-ty le-vels Re-gis-tra-ti-on Re-gis-te-red owl-Func-tio-nal-Pro-per-ty owl-Ob-ject-Pro-per-ty PEN-DING}
+
+
+%\includeonly {../others/dedication, ../intro/preface, ../others/acknowledgements, ../others/summary}
+%------------------------------------------------------------------
+%  Paper title and Author names and affiliations
+%------------------------------------------------------------------
+
+\title{KALCAS: Un frameworK para evaluaci\'on de ALineamiento de arquiteCturAS de informaci\'on y de negocio}
+\author{Estudiante UFPS}
+\principaladviser{Dar\'io Ernesto Correal Torres}
+\firstreader{Rubby Casallas Guti\'errez}
+\secondreader{Alexis Eduardo Ocampo Ramirez}
+%\department{Ingenier\'ia de Sistemas y Computaci\'on}
+\department{is}
+\degree{Magister en Ingenier\'ia}
+\copyrightyear{2012}
+\bibpagetrue
+\submitdate{Julio, 2012}
+%------------------------------------------------------------------
+%  Document
+%------------------------------------------------------------------
+\begin{document}
+\bibliographystyle{../class/uniandes-tesis}
+\bibfiles{../../bib/references}
+%\bibliography{../../bib/references}
+
+%------------------------------------------------------------------
+%  Prelimary
+%------------------------------------------------------------------
+\begin{preliminary}
+\input{resumen}
+\input{abstract}
+\input{../others/dedication}
+%\input{../others/preface} 
+\input{../others/acknowledgements}
+\contents
+%\input{../others/summary}
+\end{preliminary}
+
+%------------------------------------------------------------------
+%         Chapters
+%------------------------------------------------------------------
+\input{../chapters/chapter1/chapter1}
+\input{../chapters/chapter2/chapter2}
+\input{../chapters/chapter11/chapter11}
+%\input{../chapters/chapter4/chapter4}
+%\input{../chapters/chapter5/chapter5}
+%\input{../chapters/chapter6/chapter6}
+%\input{../chapters/chapter7/chapter7}
+%\input{../chapters/chapter8/chapter8}
+%\input{../chapters/chapter9/chapter9}
+%\input{../chapters/chapter10/chapter10}
+
+
+%------------------------------------------------------------------
+%         Postliminary
+%------------------------------------------------------------------
+\begin{postliminary}
+\references
+\end{postliminary}
+
+%------------------------------------------------------------------
+%         Apendices
+%------------------------------------------------------------------
+%\appendix
+%\input{../appendixs/appendix1}
+%\input{../appendixs/appendix1/appendix2}
+%\input{../appendixs/appendix1/appendix3}
+%\input{../appendixs/appendix1/appendix4}
+
+
+%------------------------------------------------------------------
+%  End document
+%------------------------------------------------------------------
+\end{document} 
+
+
